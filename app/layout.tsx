@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="p-6 border-b flex justify-between bg-blue-500">
           <Link href={'/'}>Blog-app</Link>
-          <Link href={'/post'}>Add New</Link>
+          <Link href={'/contact'}>Contact Us</Link>
         </header>
         <main>
           {children}
