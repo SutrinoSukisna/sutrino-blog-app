@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const PlusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,16 +16,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <>
     <html lang="en">
-      <body className={inter.className}>
-        <header className="p-6 border-b flex justify-between bg-blue-500">
-          <Link href={'/'}>Blog-app</Link>
-          <Link href={'/contact'}>Contact Us</Link>
+      <body className={PlusJakartaSans.className}>
+        <header className="p-6 border-b flex justify-between bg-blue-400">
+          <Link className="text-lg font-bold" href={'/'}>Sutrino-Blog-app</Link>
+          <Link className="text-lg font-bold" href={'/contact'}>Contact Us</Link>
         </header>
-        <main>
+        <main style={{ minHeight:"92vh" }}>
           {children}
         </main>
       </body>
     </html>
+    </>
   );
 }
